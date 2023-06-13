@@ -1,0 +1,64 @@
+﻿<Window x:Class="Pro1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pro1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="965" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lbl1" Content="" Grid.ColumnSpan="10" HorizontalAlignment="Left" Height="55" Margin="2,-101,0,0" VerticalAlignment="Top" Width="754" FontWeight="Bold" FontSize="12" HorizontalContentAlignment="Center" />
+        <Label Content="General shape&#xD;&#xA;" HorizontalAlignment="Left" Height="26" Margin="2,-44,0,0" VerticalAlignment="Top" Width="96" Grid.ColumnSpan="3"/>
+        <ComboBox x:Name="cbmShape" HorizontalAlignment="Left" Margin="38,-40,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Thickness (m)" HorizontalAlignment="Left" Height="34" Margin="48,-42,0,0" VerticalAlignment="Top" Width="96" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtThickness" HorizontalAlignment="Left" Margin="51,-35,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="61" Grid.Column="7" TextChanged="txt_TextChanged"/>
+        <Label Content="Plunge angle" HorizontalAlignment="Left" Height="33" Margin="49,37,0,0" VerticalAlignment="Top" Width="96" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtAngle" HorizontalAlignment="Left" Margin="51,43,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="61" Grid.Column="7" TextChanged="txt_TextChanged"/>
+        <Label Content="(m)" HorizontalAlignment="Left" Height="25" Margin="122,-39,0,0" VerticalAlignment="Top" Width="96" Grid.Column="7" Grid.ColumnSpan="3"/>
+        <Label Content="(0 - 360 degree)" HorizontalAlignment="Left" Height="33" Margin="122,37,0,0" VerticalAlignment="Top" Width="96" Grid.Column="7" Grid.ColumnSpan="3"/>
+        <Label Content="Grade distribution" HorizontalAlignment="Left" Height="30" Margin="2,38,0,0" VerticalAlignment="Top" Width="106" Grid.ColumnSpan="3"/>
+        <ComboBox x:Name="cbmGrade_distribution" HorizontalAlignment="Left" Margin="38,43,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Rock substance Strength" HorizontalAlignment="Left" Height="30" Margin="19,148,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="cbmHangingWallstrength" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged" Margin="38,150,0,0"/>
+        <Label Content="Fracture spacing" HorizontalAlignment="Left" Height="30" Margin="19,236,0,0" VerticalAlignment="Top" Width="128" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="cbmHangingWallfs" HorizontalAlignment="Left" Margin="38,238,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Hanging Wall" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="32" Margin="2,119,0,0" VerticalAlignment="Top" Width="116" FontWeight="Bold"/>
+        <Label Content="Rock fracture strength" HorizontalAlignment="Left" Height="30" Margin="18,354,0,0" VerticalAlignment="Top" Width="128" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="cbmHangingWallfstr" HorizontalAlignment="Left" Margin="37,355,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Rock substance Strength" HorizontalAlignment="Left" Height="30" Margin="66,146,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Grid.Column="6"/>
+        <ComboBox x:Name="cbmOreZonestrenth" HorizontalAlignment="Left" Margin="99,148,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="7" Grid.ColumnSpan="3" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Fracture spacing" HorizontalAlignment="Left" Height="30" Margin="66,234,0,0" VerticalAlignment="Top" Width="128" Grid.ColumnSpan="2" Grid.Column="6"/>
+        <ComboBox x:Name="cbmOreZonefs" HorizontalAlignment="Left" Margin="99,236,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="7" Grid.ColumnSpan="3" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Ore Zone" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="32" Margin="49,117,0,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" Grid.Column="6"/>
+        <Label Content="Rock fracture strength" HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="128" Grid.Column="6" Grid.ColumnSpan="2" Margin="0,349,0,0"/>
+        <ComboBox x:Name="cbmOreZonefstr" HorizontalAlignment="Left" Margin="99,353,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="7" Grid.ColumnSpan="3" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Rock substance Strength" HorizontalAlignment="Left" Height="30" Margin="20,469,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="cbmfootWallstrenth" HorizontalAlignment="Left" Margin="39,471,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Fracture spacing" HorizontalAlignment="Left" Height="30" Margin="20,582,0,0" VerticalAlignment="Top" Width="128" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="cbmfootWallfs" HorizontalAlignment="Left" Margin="39,584,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged"/>
+        <Label Content="Foot Wall" HorizontalAlignment="Left" Height="32" Margin="2,438,0,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <Label Content="Rock fracture strength" HorizontalAlignment="Left" Height="30" Margin="19,700,0,0" VerticalAlignment="Top" Width="128" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="cbmfootWallfstr" HorizontalAlignment="Left" Margin="38,702,0,0" VerticalAlignment="Top" Width="171" SelectedIndex="0" Grid.Column="3" Grid.ColumnSpan="4" SelectionChanged="cbm_SelectionChanged"/>
+        <ListView x:Name="resultListView" Grid.Column="6" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="4" Margin="62,467,3,-67">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Value" DisplayMemberBinding="{Binding Value}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

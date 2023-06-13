@@ -1,0 +1,3 @@
+﻿  Kjs.cpp
+E:\task\kjs\Kjs\Kjs\Kjs.cpp(1463,33): warning C4244: 'argument': conversion from 'double' to 'const unsigned __int64', possible loss of data
+  Kjs.vcxproj -> E:\task\kjs\Kjs\x64\Debug\Kjs.exe

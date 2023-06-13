@@ -1,0 +1,7 @@
+﻿  Kjs.cpp
+E:\task\kjs\Kjs\Kjs\Kjs.cpp(1463,33): warning C4244: 'argument': conversion from 'double' to 'const unsigned __int64', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 296 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Kjs.vcxproj -> E:\task\kjs\Kjs\x64\Release\Kjs.exe
